@@ -13,4 +13,14 @@ router.get('/movies', (req, res) => {
     });
 });
 
+router.get('/movies/:id', (req, res) => {
+    Movie.findById(req.params.id, (err, movie) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.json(movie);
+        }
+    });
+});
+
 export default router;

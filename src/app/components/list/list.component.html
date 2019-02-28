@@ -1,3 +1,19 @@
-<p>
-  list works!
-</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td>Year</td>
+      <td>Rated</td>
+      <td>Runtime</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{movie.title}}</td>
+      <td>{{movie.year}}</td>
+      <td>{{movie.rated}}</td>
+      <td>{{movie.runtime}}</td>
+    </tr>
+  </tbody>
+</table>
