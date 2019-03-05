@@ -5,6 +5,7 @@
       <td>Year</td>
       <td>Rated</td>
       <td>Runtime</td>
+      <td>Actions</td>
     </tr>
   </thead>
 
@@ -14,6 +15,10 @@
       <td>{{movie.year}}</td>
       <td>{{movie.rated}}</td>
       <td>{{movie.runtime}}</td>
+      <td>
+          <a (click) ="editMovie(element._id)" class="btn btn-primary">Edit</a>
+          <a (click) ="deleteMovie(element._id)" class="btn btn-danger">Delete</a>
+      </td>
     </tr>
   </tbody>
 </table>
